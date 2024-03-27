@@ -5,7 +5,7 @@
  * binary_tree_postorder - traverses a binary tree in postord fashion
  * this means traversing the left subtree, then the right subtree
  * before acting on the current node (e.g. printing its value)
- * 
+ * ...
  * @tree: the root of a subtree
  * @func: pointer to a function which takes an int and returns nothing.
  * Return: nothing
