@@ -25,13 +25,14 @@ size_t _max(size_t a, size_t b)
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-	const binary_tree_t *l;
-	const binary_tree_t *r;
+	size_t ldepth;
+	size_t rdepth;
 
 	if (tree == NULL)
 		return (0);
-	l = tree->left;
-	r = tree->right;
-
-	return (1 + _max(binary_tree_height(l), binary_tree_height(r)));
+	ldepth = binary_tree_height(tree->left);
+	rdepth = binary_tree_height(tree->right);
+	if (ldepth >= rdepth)
+		return (ldepth + 1);
+	return (rdepth + 1);
 }
